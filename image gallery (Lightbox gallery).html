@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="gallery min-vh-100">
+        <div class="container">
+            <h2>PHOTO/GALLERY</h2>
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <div class="col">
+                    <img src="images/Buggati.jpeg" class="gallery-item" alt="No img">
+                </div>
+                <div class="col">
+                    <img src="images/car-8015904_1280.webp" class="gallery-item" alt="No img">
+                </div>
+                <div class="col">
+                    <img src="images/Mercedes.jpg" class="gallery-item" alt="No img">
+                </div>
+                <div class="col">
+                    <img src="images/McLaren.jpg" class="gallery-item" alt="No img">
+                </div>
+                <div class="col">
+                    <img src="images/BMW.webp" class="gallery-item" alt="No img">
+                </div>
+                <div class="col">
+                    <img src="images/Sports_car.jpg" class="gallery-item" alt="No img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/Buggati.jpeg" class="modal-img" alt="No img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("img").click(function (e) {
+                if (e.target.classList.contains("gallery-item")) {
+                    const src = e.target.getAttribute("src");
+                    document.querySelector(".modal-img").src = src;
+                    const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
+                    myModal.show();
+                }      
+            })
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
