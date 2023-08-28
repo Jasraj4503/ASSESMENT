@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f2f2;
+}
+/* container div */
+.container{
+    width: 500px;
+    background-color: white;
+    border-top: 5px solid gold;
+    padding: 25px;
+    margin: 50px;
+}
+
+/* h1 tag */
+.container h1{
+    text-align: center;
+    font-size: 30px;
+    line-height: 24px;
+    padding-bottom: 30px;
+}
+
+/* user information input */
+.input-name{
+    position: relative;
+}
+td{
+    padding-top: 20px;
+}
+
+/* inputs icon */
+.input-name i{
+    position: absolute;
+    font-size: 18px;
+    padding: 8px 10px;
+    border-right: 1px solid #cccccc;
+}
+
+/* Class defined to inputs*/
+.Box{
+    width: 450px;
+    padding: 8px 0 8px 40px;
+}
+
+/* Class defined only to the name inputs */
+.Name{
+    width: 200px;
+    padding: 8px 0 8px 40px;
+}
+.Box, .Name{
+    border: 1px solid #cccccc;
+    outline: none;
+}
+
+/* gender input or checkbox */
+.gender{
+    margin-left: 10px;
+}
+
+/* coutry input */
+#country{
+    display: inline-block;
+    width: 450px;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    color: #7b7b7b;
+    appearance: none;
+}
+#country:hover, #country:focus{
+    color: black;
+}
+
+/* custom arrow for country input */
+.arrow{
+    position: relative;
+}
+.arrow::after{
+    content: "";
+    position: absolute;
+    right: 10px;
+    margin-top: -20px;
+    border-top: 8px solid #ccc;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    pointer-events: none;
+}
+#country:hover +.arrow::after, #country:focus +.arrow::after{
+    border-top-color: black;
+}
+
+/* submit button */
+.submit-btn{
+    height: 35px;
+    width: 450px;
+    background-color: gold;
+    color: white;
+    border: none;
+    font-size: 16px;   
+    cursor: pointer;
+}

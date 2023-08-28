@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1>Responsive Registration Form</h1>
+            <table>
+                <form action="" onsubmit="return ValidData()">
+                    <tr>
+                        <!-- Email input -->
+                        <td colspan="2" class="input-name">
+                            <i class="fa-solid fa-envelope class"></i>
+                            <input type="email" placeholder="Email" class="Box" id="email" onchange="ValidData()">
+                            <span id="emerror"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Password input -->
+                        <td colspan="2" class="input-name">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" class="Box" id="password" onchange="ValidData()">
+                            <span id="passerror"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Confirm Password input -->
+                        <td colspan="2" class="input-name">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Re-type-Password" class="Box" id="Repassword" onchange="ValidData()">
+                            <span id="reperror"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Mobile Number input -->
+                        <td colspan="2" class="input-name">
+                            <i class="fa-solid fa-mobile"></i>
+                            <input type="number" placeholder="Mobile Number" class="Box" id="mobile" onchange="ValidData()">
+                            <span id="mobileerror"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- First Name input -->
+                        <td class="input-name">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="First Name" class="Name" id="fname" onchange="ValidData()">
+                            <div id="fnameerror"></div>
+                        </td>
+                        <!-- Last Name input -->
+                        <td class="input-name">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Last Name" class="Name" id="lname" onchange="ValidData()">
+                            <div id="lnameerror"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Gender select -->
+                        <td>
+                            <input type="radio" name="gender" required>Male
+                            <input type="radio" name="gender" class="gender" required>Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Country select input -->
+                        <td colspan="2">
+                            <select id="country" onchange="ValidData()">
+                                <option value="" selected="selected" disabled="disabled">Select a country</option>
+                                <option value="">India</option>
+                                <option value="">Japan</option>
+                                <option value="">Australia</option>
+                                <option value="">Canada</option>
+                                <option value="">America</option>
+                                <option value="">England</option>
+                            </select>
+                            <div class="arrow" id="selecountry"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Terms and Conditions -->
+                        <td>
+                            <input type="checkbox" required>
+                            <label>I agree with terms and conditions</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Messages -->
+                        <td>
+                            <input type="checkbox" required>
+                            <label>I want to receive newsletter</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Submit Button -->
+                        <td colspan="2">
+                            <input type="submit" value="Register" class="submit-btn">
+                        </td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </center>
+    <script src="form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: cornflowerblue;
+}
+
+.caluclator {
+    width: 325px;
+    background-color: black;
+    text-align: right;
+    box-shadow: 10px 10px rgb(0, 0, 0, 0.5);
+}
+
+/* output screen */
+.display {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    color: black;
+}
+
+.display pre {
+    text-align: left;
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+.output {
+    font-size: 33px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.result {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+/* Buttons */
+.keys {
+    height: 330px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keys button {
+    height: 82px;
+    width: 85px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+
+/* buttons or operators defined by id */
+#delete {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(39, 38, 38);
+}
+
+#divide {
+    height: 70px;
+    width: 70px;
+    margin-top: -12px;
+    background-color: rgb(39, 38, 38);
+}
+
+#mul {
+    height: 60px;
+    width: 70px;
+    margin-top: -24px;
+    background-color: rgb(39, 38, 38);
+}
+
+#mins {
+    height: 60px;
+    width: 70px;
+    margin-top: -47px;
+    background-color: rgb(39, 38, 38);
+}
+
+#add {
+    height: 71px;
+    width: 70px;
+    margin-top: -69px;
+    margin-left: 255px;
+    background-color: rgb(39, 38, 38);
+}
+
+/* animation applied on output screen */
+@keyframes big{
+    0%{
+        font-size: 23px;             
+    }
+    100%{
+        font-size: 40px;
+    }
+}
+@keyframes small{
+    0%{
+        font-size: 33px;
+    }
+    100%{
+        font-size: 23px;
+    }
+}
